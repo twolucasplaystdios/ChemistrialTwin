@@ -1,0 +1,19 @@
+{
+  "itemGroup.chemistrial": "Example Mod Tab",
+  "item.chemistrial.raw_zinc": "Raw Zinc",
+  "item.chemistrial.zinc_ingot": "鋅錠",
+  "block.chemistrial.zinc_block": "鋅塊",
+  "block.chemistrial.zinc_ore": "鋅礦",
+  "item.chemistrial.uranium_ingot": "鈾錠",
+  "item.chemistrial.mercury_ii_sulfide": "硫化汞",
+
+
+  "chemistrial.configuration.title": "Chemistrial Mod Configs",
+  "chemistrial.configuration.section.chemistrial.common.toml": "Chemistrial Mod Configs",
+  "chemistrial.configuration.section.chemistrial.common.toml.title": "Chemistrial Mod Configs",
+  "chemistrial.configuration.items": "Item List",
+  "chemistrial.configuration.logDirtBlock": "Log Dirt Block",
+  "chemistrial.configuration.magicNumberIntroduction": "Magic Number Text",
+  "chemistrial.configuration.magicNumber": "Magic Number",
+  "creativetab.tutorialmod.transition_metals_tab": "過渡金屬"
+}

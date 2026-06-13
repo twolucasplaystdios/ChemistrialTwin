@@ -1,0 +1,21 @@
+{
+  "itemGroup.chemistrial": "Example Mod Tab",
+
+  "item.chemistrial.raw_zinc": "Raw Zinc",
+  "item.chemistrial.zinc_ingot": "Zinc Ingot",
+  "item.chemistrial.uranium_ingot": "Uranium Ingot",
+  "item.chemistrial.mercury_ii_sulfide": "Mercury (II) Sulfide",
+
+
+  "block.chemistrial.zinc_block": "Block of Zinc",
+  "block.chemistrial.zinc_ore": "Zinc Ore",
+
+  "chemistrial.configuration.title": "Chemistrial Mod Configs",
+  "chemistrial.configuration.section.chemistrial.common.toml": "Chemistrial Mod Configs",
+  "chemistrial.configuration.section.chemistrial.common.toml.title": "Chemistrial Mod Configs",
+  "chemistrial.configuration.items": "Item List",
+  "chemistrial.configuration.logDirtBlock": "Log Dirt Block",
+  "chemistrial.configuration.magicNumberIntroduction": "Magic Number Text",
+  "chemistrial.configuration.magicNumber": "Magic Number",
+  "creativetab.tutorialmod.transition_metals_tab": "Transition Metals"
+}
