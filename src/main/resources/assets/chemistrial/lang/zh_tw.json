@@ -15,5 +15,8 @@
   "chemistrial.configuration.logDirtBlock": "Log Dirt Block",
   "chemistrial.configuration.magicNumberIntroduction": "Magic Number Text",
   "chemistrial.configuration.magicNumber": "Magic Number",
-  "creativetab.tutorialmod.transition_metals_tab": "過渡金屬"
+
+  "creativetab.chemistrialmod.transition_metals_tab": "過渡金屬",
+  "creativetab.chemistrialmod.actinides_metals_tab": "錒系元素",
+  "creativetab.chemistrialmod.other_chemicals_tab": "其他化合物"
 }

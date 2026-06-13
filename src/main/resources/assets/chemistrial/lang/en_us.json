@@ -17,5 +17,8 @@
   "chemistrial.configuration.logDirtBlock": "Log Dirt Block",
   "chemistrial.configuration.magicNumberIntroduction": "Magic Number Text",
   "chemistrial.configuration.magicNumber": "Magic Number",
-  "creativetab.tutorialmod.transition_metals_tab": "Transition Metals"
+
+  "creativetab.chemistrialmod.transition_metals_tab": "Transition Metals",
+  "creativetab.chemistrialmod.actinides_metals_tab": "Actinides Elements",
+  "creativetab.chemistrialmod.other_chemicals_tab": "Other Chemicals"
 }

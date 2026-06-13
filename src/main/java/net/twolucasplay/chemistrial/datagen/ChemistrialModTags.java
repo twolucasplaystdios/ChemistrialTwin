@@ -7,7 +7,7 @@ import net.minecraft.world.item.Item;
 
 public class ChemistrialModTags {
     public static class Items {
-        private static Identifier ResourceLocation;
+        public static Identifier ResourceLocation;
         public static final TagKey<Item> TRANSITION_METALS_INGOTS = TagKey.create(
                 Registries.ITEM,
                 Identifier.fromNamespaceAndPath("c", "ingots/transition_metals_ingots")

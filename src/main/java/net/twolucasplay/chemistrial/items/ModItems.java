@@ -16,12 +16,17 @@ public class ModItems {
 
     public static final DeferredItem<Item> URANIUM_INGOT = ITEMS.register(
             "uranium_ingot",
-            id -> new RadioactiveItem(
+            id -> new ChemistrialRadioactiveItem(
                     new Item.Properties()
                             .setId(ResourceKey.create(Registries.ITEM, id))  // 完美對應，再也不用手動敲字串、也不會報錯了！
                             .component(ModDataComponents.ISOTOPE.get(), 238)
                             .component(ModDataComponents.PROTONS.get(), 92)
             )
+    );
+
+    public static final DeferredItem<Item> IRON_OXIDE = ITEMS.registerSimpleItem(
+            "iron_oxide",
+            properties -> properties
     );
 
     public static final DeferredItem<Item> MERCURY_II_SULFIDE = ITEMS.registerSimpleItem(
