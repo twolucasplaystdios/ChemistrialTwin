@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'com.github.breadmoirai.github-release' version '2.5.2'
     id 'net.neoforged.moddev' version '2.0.141'
     id 'idea'
 }
@@ -147,6 +148,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_name               : mod_name,
             mod_license            : mod_license,
             mod_version            : mod_version,
+            mod_update_title       : mod_update_title,
             jei_version            : jei_version
     ]
     inputs.properties replaceProperties
@@ -160,18 +162,23 @@ sourceSets.main.resources.srcDir generateModMetadata
 // To avoid having to run "generateModMetadata" manually, make it run on every project reload
 neoForge.ideSyncTask generateModMetadata
 
-// Example configuration to allow publishing using the maven-publish plugin
-publishing {
-    publications {
-        register('mavenJava', MavenPublication) {
-            from components.java
-        }
-    }
-    repositories {
-        maven {
-            url "file://${project.projectDir}/repo"
-        }
-    }
+githubRelease {
+    // Read the GitHub token from environment variables for security
+    token = System.getenv("GITHUB_TOKEN") ?: ""
+    println "Token : ${System.getenv("GITHUB_TOKEN") != null}"
+    targetCommitish = "master"
+    owner = "twolucasplaystdios"
+    repo = "ChemistrialTwin"
+    tagName = "v${project.version}"
+    releaseName = "Chemistrial v${project.version} \"${project.mod_update_title}\" (Minecraft ${project.minecraft_version})"
+
+    // Automatically generate the changelog based on GitHub commits
+    generateReleaseNotes = true
+
+    // Targets the production mod jar built by the NeoForge plugin
+    // (Usually 'jar' or 'remapJar' depending on your toolchain setup)
+    releaseAssets = [tasks.jar.archiveFile.get()]
+
 }
 
 tasks.withType(JavaCompile).configureEach {
