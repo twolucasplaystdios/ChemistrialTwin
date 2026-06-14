@@ -166,7 +166,7 @@ githubRelease {
     // Read the GitHub token from environment variables for security
     token = System.getenv("GITHUB_TOKEN") ?: ""
     println "Token : ${System.getenv("GITHUB_TOKEN") != null}"
-    targetCommitish = "master"
+    targetCommitish = "master-26.1"
     owner = "twolucasplaystdios"
     repo = "ChemistrialTwin"
     tagName = "v${project.version}"
