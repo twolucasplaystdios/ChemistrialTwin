@@ -1,5 +1,6 @@
 package net.twolucasplay.chemistrial.events;
 
+import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -10,18 +11,17 @@ import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
 @EventBusSubscriber(modid = ChemistrialMod.MODID)
 public class ModModifyEvents {
     @SubscribeEvent
-    public static void onModifyDefaultComponents(ModifyDefaultComponentsEvent event) {
+    public static void modifyComponents(ModifyDefaultComponentsEvent event) {
 
-        // 為原版鐵錠 (Items.IRON_INGOT) 注入預設組件
-        event.modify(Items.IRON_INGOT, builder -> {
-            builder.set(ModDataComponents.ISOTOPE.get(), 56);  // 鐵-56 (質量數)
-            builder.set(ModDataComponents.PROTONS.get(), 26);  // 質子數 26
+
+        event.modify(Items.IRON_INGOT, (patch, provider, item) -> {
+            patch.set(ModDataComponents.ISOTOPE.get(), 56);
+            patch.set(ModDataComponents.PROTONS.get(), 26);
         });
 
-        // 順便幫其他原版金屬設定，例如黃金 (質子數 79, 金-197)
-        event.modify(Items.GOLD_INGOT, builder -> {
-            builder.set(ModDataComponents.ISOTOPE.get(), 197);
-            builder.set(ModDataComponents.PROTONS.get(), 79);
+        event.modify(Items.GOLD_INGOT, (patch, provider, item) -> {
+            patch.set(ModDataComponents.ISOTOPE.get(), 197);
+            patch.set(ModDataComponents.PROTONS.get(), 79);
         });
     }
 }
