@@ -20,6 +20,8 @@
   "chemistrial.configuration.magicNumberIntroduction": "Magic Number Text",
   "chemistrial.configuration.magicNumber": "Magic Number",
 
+  "tip.chemistrial.isotope": "Isotope: ",
+
   "creativetab.chemistrialmod.transition_metals_tab": "Transition Metals",
   "creativetab.chemistrialmod.actinides_metals_tab": "Actinides Elements",
   "creativetab.chemistrialmod.reactive_chemicals_tab": "Reactive Chemicals",

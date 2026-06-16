@@ -52,7 +52,6 @@ public class ModSodiumExplosionInteractionInWaterHandler {
                         purity = 1.0f;
                     }
 
-
                     int count = stack.getCount();
 
                     itemEntity.discard();

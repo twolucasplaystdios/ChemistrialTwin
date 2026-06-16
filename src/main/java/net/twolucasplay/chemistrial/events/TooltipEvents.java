@@ -20,7 +20,7 @@ public class TooltipEvents {
         if (stack.has(ModDataComponents.ISOTOPE.get()) && stack.has(ModDataComponents.PROTONS.get())) {
             int isotopeValue = stack.get(ModDataComponents.ISOTOPE);
 
-            Component tooltipText = Component.literal("Isotope: " + isotopeValue)
+            Component tooltipText = Component.literal(Component.translatable("tip.chemistrial.isotope").getString() + isotopeValue)
                     .withStyle(ChatFormatting.AQUA);
 
             if (event.getToolTip().size() > 1) {
