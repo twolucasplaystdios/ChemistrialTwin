@@ -20,11 +20,11 @@ public class ChemistrialModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(ChemistrialModTags.Items.TRANSITION_METALS_INGOTS)
-                .add(ModItems.ZINC_INGOT.get())
-                .add(Items.COPPER_INGOT)
-                .add(Items.IRON_INGOT);
+                .add(ModItems.ZINC_INGOT.getKey())
+                .add(Items.COPPER_INGOT.builtInRegistryHolder().getKey())
+                .add(Items.IRON_INGOT.builtInRegistryHolder().getKey());
 
         this.tag(ChemistrialModTags.Items.ACTINIDES_METALS_INGOTS)
-                .add(ModItems.URANIUM_INGOT.get());
+                .add(ModItems.URANIUM_INGOT.getKey());
     }
 }

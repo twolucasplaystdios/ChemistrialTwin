@@ -18,11 +18,11 @@ public class ChemistrialModBlocksTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.ZINC_BLOCK.get())
-                .add(ModBlocks.ZINC_ORE.get());
+                .add(ModBlocks.ZINC_BLOCK.getKey())
+                .add(ModBlocks.ZINC_ORE.getKey());
 
-        tag(BlockTags.NEEDS_IRON_TOOL).add()
-                .add(ModBlocks.ZINC_BLOCK.get())
-                .add(ModBlocks.ZINC_ORE.get());
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.ZINC_BLOCK.getKey())
+                .add(ModBlocks.ZINC_ORE.getKey());
     }
 }
