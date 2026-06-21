@@ -1,6 +1,8 @@
 package net.twolucasplay.chemistrial;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FireBlock;
 import net.twolucasplay.chemistrial.blocks.ModBlocks;
 import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
 import net.twolucasplay.chemistrial.items.ModItems;

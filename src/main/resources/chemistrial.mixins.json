@@ -2,7 +2,9 @@
   "required": true,
   "package": "net.twolucasplay.chemistrial.mixin",
   "compatibilityLevel": "JAVA_25",
-  "mixins": [],
+  "mixins": [
+    "FireBlockMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
