@@ -41,7 +41,7 @@ public class ModCreativeModeTabs {
 
 
     public static final Supplier<CreativeModeTab> OTHERS_ITEMS_TAB = CREATIVE_MODE_TABS.register("other_chemicals_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.URANIUM_INGOT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.IRON_OXIDE.get()))
                     .title(Component.translatable("creativetab.chemistrialmod.other_chemicals_tab"))
                     .withTabsBefore(Identifier.fromNamespaceAndPath(ChemistrialMod.MODID, "reactive_chemicals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -50,11 +50,12 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> REACTIVE_METALS_ITEMS_TAB = CREATIVE_MODE_TABS.register("reactive_chemicals_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.URANIUM_INGOT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SODIUM_INGOT.get()))
                     .title(Component.translatable("creativetab.chemistrialmod.reactive_chemicals_tab"))
                     .withTabsBefore(Identifier.fromNamespaceAndPath(ChemistrialMod.MODID, "actinides_metals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SODIUM_INGOT);
+                        output.accept(ModItems.MAGNESIUM_INGOT);
                     }).build());
 
     public static void register(IEventBus eventBus) {

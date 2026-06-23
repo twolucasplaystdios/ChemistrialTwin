@@ -24,6 +24,7 @@ public class ModItems {
             )
     );
 
+
     public static final DeferredItem<Item> SODIUM_INGOT = ITEMS.register(
             "sodium_ingot",
             id -> new ChemistrialRadioactiveItem(
@@ -34,6 +35,18 @@ public class ModItems {
                             .component(ModDataComponents.PURITY.get(), 0.5f)
             )
     );
+
+    public static final DeferredItem<Item> MAGNESIUM_INGOT = ITEMS.register(
+            "magnesium_ingot",
+            id -> new ChemistrialRadioactiveItem(
+                    new Item.Properties()
+                            .setId(ResourceKey.create(Registries.ITEM, id))  // 完美對應，再也不用手動敲字串、也不會報錯了！
+                            .component(ModDataComponents.ISOTOPE.get(), 24)
+                            .component(ModDataComponents.PROTONS.get(), 12)
+                            .component(ModDataComponents.PURITY.get(), 0.5f)
+            )
+    );
+
 
     public static final DeferredItem<Item> IRON_OXIDE = ITEMS.registerSimpleItem(
             "iron_oxide",
