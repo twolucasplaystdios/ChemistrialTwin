@@ -13,7 +13,7 @@ import static net.minecraft.world.level.block.FireBlock.*;
 public class ModMagnesiumFireBlock extends FireBlock {
 
     public ModMagnesiumFireBlock(Properties properties) {
-        super(properties); // 2.0f is the fire damage dealt
+        super(properties.lightLevel(state -> 15));
     }
 
 }
