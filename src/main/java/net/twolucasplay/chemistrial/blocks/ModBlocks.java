@@ -2,9 +2,8 @@ package net.twolucasplay.chemistrial.blocks;
 
 import net.minecraft.references.BlockIds;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FireBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -34,9 +33,10 @@ public class ModBlocks {
             MapColor.COLOR_LIGHT_BLUE
     );
 
-    public static final DeferredBlock<Block> MAGNESIUM_FIRE = registerFireBlock(
+    public static final DeferredBlock<FireBlock> MAGNESIUM_FIRE = registerCustomFireBlock(
             "magnesium_fire",
-            MapColor.COLOR_LIGHT_GRAY
+            DyeColor.WHITE,
+            ModMagnesiumFireBlock::new
     );
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
@@ -50,6 +50,12 @@ public class ModBlocks {
                 (T) new FireBlock(properties.mapColor(mapColor));
 
         return BLOCKS.registerBlock(name, props);
+    }
+
+    private static <T extends BaseFireBlock> DeferredBlock<T> registerCustomFireBlock(String name, DyeColor dyeColor, Function<BlockBehaviour.Properties, T> blockFactory   ) {
+        return BLOCKS.registerBlock(name,
+                properties -> blockFactory.apply(properties.mapColor(dyeColor))
+        );
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {

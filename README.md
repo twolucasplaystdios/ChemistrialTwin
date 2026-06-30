@@ -1,5 +1,5 @@
 # Note
-Will be ported to 26.2 if possible.
+**This Project is made with AI suggestions, because I don't know some of the features in Java.** </br>
 If you encounter errors or want to request features, please go to issues.
 # Credits
 ## Textures (Some aren't modified)
