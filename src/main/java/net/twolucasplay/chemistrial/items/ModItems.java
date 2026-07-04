@@ -60,6 +60,16 @@ public class ModItems {
 
     public static final DeferredItem<Item> RAW_ZINC = ITEMS.registerSimpleItem("raw_zinc", properties -> properties);
 
+    // Math Stuff
+
+    public static final DeferredItem<Item> COMPASS_STICK = ITEMS.register("compass_stick",
+            id -> new ChemistrialMathCompassItem(
+                new Item.Properties()
+                        .setId(ResourceKey.create(Registries.ITEM, id))  // 完美對應，再也不用手動敲字串、也不會報錯了！
+                        .component(ModDataComponents.CENTER_X.get(), 1.00f)
+            )
+    );
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

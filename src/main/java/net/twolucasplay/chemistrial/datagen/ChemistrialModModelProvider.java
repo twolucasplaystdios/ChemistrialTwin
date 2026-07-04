@@ -12,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FireBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.twolucasplay.chemistrial.ChemistrialMod;
 import net.twolucasplay.chemistrial.blocks.ModBlocks;
@@ -42,18 +43,7 @@ public class ChemistrialModModelProvider extends ModelProvider {
 
         for (DeferredHolder<net.minecraft.world.level.block.Block, ? extends net.minecraft.world.level.block.Block> blockHolder : ModBlocks.BLOCKS.getEntries()) {
             Block block = blockHolder.value();
-            if (block instanceof ModMagnesiumFireBlock) {
-//                blockModels.createFloorFireModels(block);
-//                Identifier modelLoc = TexturedModel.CUBE.create(block, blockModels.modelOutput);
-//
-//                Variant variant = new Variant(modelLoc);
-//                blockModels.blockStateOutput.accept(
-//                        MultiVariantGenerator.dispatch(
-//                                block,
-//                                // Create the basic multi-variant
-//                                BlockModelGenerators.variant(variant)
-//                        )
-//                );
+            if (block instanceof FireBlock) {
                 MultiVariant floorFireModels = blockModels.createFloorFireModels(block);
                 MultiVariant sideFireModels = blockModels.createSideFireModels(block);
                 blockModels.blockStateOutput

@@ -28,9 +28,10 @@ public class ModBlocks {
             properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> SULFUR_FIRE = registerFireBlock(
+    public static final DeferredBlock<FireBlock> SULFUR_FIRE = registerCustomFireBlock(
             "sulfur_fire",
-            MapColor.COLOR_LIGHT_BLUE
+            DyeColor.LIGHT_BLUE,
+            ModSulfurFireBlock::new
     );
 
     public static final DeferredBlock<FireBlock> MAGNESIUM_FIRE = registerCustomFireBlock(

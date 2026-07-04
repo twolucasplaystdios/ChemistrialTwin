@@ -39,6 +39,30 @@ public class ModDataComponents {
                     .build()
     );
 
+    public static final Supplier<DataComponentType<Float>> CENTER_X = COMPONENTS.register(
+            "center_x",
+            () -> DataComponentType.<Float>builder()
+                    .networkSynchronized(ByteBufCodecs.FLOAT) // 自動同步客戶端與伺服器
+                    .persistent(Codec.FLOAT)                  // 自動儲存到存檔
+                    .build()
+    );
+
+    public static final Supplier<DataComponentType<Float>> CENTER_Y = COMPONENTS.register(
+            "center_y",
+            () -> DataComponentType.<Float>builder()
+                    .networkSynchronized(ByteBufCodecs.FLOAT) // 自動同步客戶端與伺服器
+                    .persistent(Codec.FLOAT)                  // 自動儲存到存檔
+                    .build()
+    );
+
+    public static final Supplier<DataComponentType<Float>> CENTER_Z = COMPONENTS.register(
+            "center_z",
+            () -> DataComponentType.<Float>builder()
+                    .networkSynchronized(ByteBufCodecs.FLOAT) // 自動同步客戶端與伺服器
+                    .persistent(Codec.FLOAT)                  // 自動儲存到存檔
+                    .build()
+    );
+
     public static void register(IEventBus eventBus) {
         COMPONENTS.register(eventBus);
     }
