@@ -1,0 +1,17 @@
+{
+  "type": "chemistrial:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:cinnabar",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "chance": 1.0,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "stack": {
+    "count": 2,
+    "id": "chemistrial:mercury_ii_sulfide"
+  }
+}

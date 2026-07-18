@@ -46,13 +46,6 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> DeferredBlock<T> registerFireBlock(String name, MapColor mapColor) {
-        Function<BlockBehaviour.Properties, T> props = properties ->
-                (T) new FireBlock(properties.mapColor(mapColor));
-
-        return BLOCKS.registerBlock(name, props);
-    }
-
     private static <T extends BaseFireBlock> DeferredBlock<T> registerCustomFireBlock(String name, DyeColor dyeColor, Function<BlockBehaviour.Properties, T> blockFactory   ) {
         return BLOCKS.registerBlock(name,
                 properties -> blockFactory.apply(properties.mapColor(dyeColor))

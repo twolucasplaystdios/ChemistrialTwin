@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.FireBlock;
 import net.twolucasplay.chemistrial.blocks.ModBlocks;
 import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
 import net.twolucasplay.chemistrial.items.ModItems;
+import net.twolucasplay.chemistrial.loot.ModLootModifier;
 import net.twolucasplay.chemistrial.tabs.ModCreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -34,12 +35,16 @@ public class ChemistrialMod {
     public ChemistrialMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        ModDataComponents.COMPONENTS.register(modEventBus);
+//        ModDataComponents.COMPONENTS.register(modEventBus);
+        ModDataComponents.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModLootModifier.register(modEventBus);
+
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ChemistrialMod) to respond directly to events.

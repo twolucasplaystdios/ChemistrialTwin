@@ -5,12 +5,15 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.neoforged.fml.common.Mod;
 import net.twolucasplay.chemistrial.blocks.ModBlocks;
 import net.twolucasplay.chemistrial.items.ModItems;
 import org.jspecify.annotations.NonNull;
 
 import java.util.Set;
+import java.util.function.Function;
 
 public class ChemistrialModBlockLootTableProvider extends BlockLootSubProvider {
     public ChemistrialModBlockLootTableProvider(HolderLookup.Provider registries) {

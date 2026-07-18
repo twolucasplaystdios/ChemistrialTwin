@@ -101,7 +101,7 @@ public class ModSodiumExplosionInteractionInWaterHandler {
                     float physicalPower = totalEnergykJ / MC_POWER_TO_KJ;
 
                     // 計算最終爆炸半徑/威力
-                    float explosionPower = (float) Math.sqrt(physicalPower) * 4.0f;
+                    float explosionPower = (float) Math.sqrt(physicalPower) * 2.0f;
 
                     final float MAX_SAFE_POWER = 35.0f;
                     if (explosionPower > MAX_SAFE_POWER) {
