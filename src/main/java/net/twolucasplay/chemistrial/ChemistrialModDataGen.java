@@ -26,5 +26,7 @@ public class ChemistrialModDataGen {
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ChemistrialModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true, new ModGlobalLootModifierProvider(packOutput, lookupProvider));
+
+        generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
     }
 }
