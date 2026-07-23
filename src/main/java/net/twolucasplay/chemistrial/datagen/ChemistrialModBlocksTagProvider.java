@@ -23,6 +23,7 @@ public class ChemistrialModBlocksTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.ZINC_BLOCK.getKey())
+                .add(ModBlocks.DEEPSLATE_ZINC_ORE.getKey())
                 .add(ModBlocks.ZINC_ORE.getKey());
 
         tag(BlockTags.NEEDS_IRON_TOOL)

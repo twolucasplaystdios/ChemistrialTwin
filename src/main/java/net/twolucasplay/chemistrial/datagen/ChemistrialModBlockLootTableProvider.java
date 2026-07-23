@@ -24,6 +24,7 @@ public class ChemistrialModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.ZINC_BLOCK.value());
         add(ModBlocks.ZINC_ORE.get(), createOreDrop(ModBlocks.ZINC_ORE.get(), ModItems.RAW_ZINC.get()));
+        add(ModBlocks.DEEPSLATE_ZINC_ORE.get(), createOreDrop(ModBlocks.DEEPSLATE_ZINC_ORE.get(), ModItems.RAW_ZINC.get()));
         this.add(ModBlocks.SULFUR_FIRE.get(), noDrop());
         this.add(ModBlocks.MAGNESIUM_FIRE.get(), noDrop());
     }

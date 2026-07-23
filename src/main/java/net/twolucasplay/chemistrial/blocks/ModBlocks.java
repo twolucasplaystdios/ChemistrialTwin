@@ -24,9 +24,13 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.IRON)));
 
-    public  static final DeferredBlock<Block> ZINC_ORE = registerBlock("zinc_ore", properties -> new Block(
+    public static final DeferredBlock<Block> ZINC_ORE = registerBlock("zinc_ore", properties -> new Block(
             properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> DEEPSLATE_ZINC_ORE = registerBlock("deepslate_zinc_ore", properties -> new Block(
+            properties.strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<FireBlock> SULFUR_FIRE = registerCustomFireBlock(
             "sulfur_fire",
