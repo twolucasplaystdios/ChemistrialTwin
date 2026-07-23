@@ -14,3 +14,4 @@ If you encounter errors or want to request features, please go to issues.
 [Create](https://github.com/Creators-of-Create/Create)
 ## Codes
 twolucasplay
+Modding tutorial by [kaupenjoe](https://www.youtube.com/@ModdingByKaupenjoe). ~~I'm still a learner lol~~
