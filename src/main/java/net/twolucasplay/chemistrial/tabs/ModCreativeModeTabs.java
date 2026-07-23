@@ -3,14 +3,15 @@ package net.twolucasplay.chemistrial.tabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.twolucasplay.chemistrial.ChemistrialMod;
+import net.twolucasplay.chemistrial.blocks.ModBlocks;
 import net.twolucasplay.chemistrial.items.ModItems;
 
 import java.util.function.Supplier;
@@ -24,11 +25,24 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.chemistrialmod.transition_metals_tab"))
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.ZINC_INGOT);
-                        output.accept(ModItems.RAW_ZINC);
+                        // Ingots
                         output.accept(Items.IRON_INGOT);
                         output.accept(Items.COPPER_INGOT);
+                        output.accept(ModItems.ZINC_INGOT);
                         output.accept(Items.GOLD_INGOT);
+                        // Raw Ores
+                        output.accept(Items.RAW_IRON);
+                        output.accept(Items.RAW_COPPER);
+                        output.accept(ModItems.RAW_ZINC);
+                        output.accept(Items.RAW_GOLD);
+                        // Ore Blocks
+                        output.accept(ModBlocks.ZINC_ORE.asItem());
+                        output.accept(ModBlocks.DEEPSLATE_ZINC_ORE.asItem());
+                        // Metal Blocks
+                        output.accept(Blocks.IRON_BLOCK.asItem());
+                        output.accept(Blocks.COPPER_BLOCK.asList().getFirst().asItem());
+                        output.accept(ModBlocks.ZINC_BLOCK.asItem());
+                        output.accept(Blocks.GOLD_BLOCK.asItem());
                     }).build());
 
     public static final Supplier<CreativeModeTab> ACTINIDES_METALS_ITEMS_TAB = CREATIVE_MODE_TABS.register("actinides_metals_tab",
@@ -56,6 +70,14 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SODIUM_INGOT);
                         output.accept(ModItems.MAGNESIUM_INGOT);
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> CARBONATE_SALTS_TAB = CREATIVE_MODE_TABS.register("carbonate_salts_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SODIUM_INGOT.get()))
+                    .title(Component.translatable("creativetab.chemistrialmod.carbonate_salts_tab"))
+                    .withTabsBefore(Identifier.fromNamespaceAndPath(ChemistrialMod.MODID, "reactive_metals_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.CALCIUM_CARBONATE);
                     }).build());
 
     public static void register(IEventBus eventBus) {

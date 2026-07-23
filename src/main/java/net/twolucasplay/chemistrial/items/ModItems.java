@@ -60,6 +60,12 @@ public class ModItems {
 
     public static final DeferredItem<Item> RAW_ZINC = ITEMS.registerSimpleItem("raw_zinc", properties -> properties);
 
+    public static final DeferredItem<Item> CALCIUM_CARBONATE = ITEMS.registerSimpleItem(
+            "calcium_carbonate",
+            properties -> properties
+    );
+
+
     // Math Stuff
 
     public static final DeferredItem<Item> COMPASS_STICK = ITEMS.register("compass_stick",

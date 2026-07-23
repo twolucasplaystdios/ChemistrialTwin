@@ -26,5 +26,12 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new AddItemStackModifier(new LootItemCondition[] {
                         LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.CINNABAR).build(),
                         LootItemRandomChanceCondition.randomChance(1f).build() },new ItemStackTemplate(ModItems.MERCURY_II_SULFIDE.get(), 2)));
+
+        // Bone Block to Calcium Carbonate.
+        this.add("bone_block_to_calcium_carbonate",
+                new AddItemStackModifier(new LootItemCondition[] {
+                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.BONE_BLOCK).build(),
+                        LootItemRandomChanceCondition.randomChance(0.2f).build() },new ItemStackTemplate(ModItems.CALCIUM_CARBONATE.get(), 1)));
+
     }
 }

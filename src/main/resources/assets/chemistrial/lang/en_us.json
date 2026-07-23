@@ -10,6 +10,7 @@
 
   "item.chemistrial.iron_oxide": "Iron Oxide",
 
+  "item.chemistrial.calcium_carbonate": "Calcium Carbonate",
 
   "block.chemistrial.zinc_block": "Block of Zinc",
   "block.chemistrial.zinc_ore": "Zinc Ore",
@@ -28,5 +29,6 @@
   "creativetab.chemistrialmod.transition_metals_tab": "Transition Metals",
   "creativetab.chemistrialmod.actinides_metals_tab": "Actinides Elements",
   "creativetab.chemistrialmod.reactive_chemicals_tab": "Reactive Chemicals",
-  "creativetab.chemistrialmod.other_chemicals_tab": "Other Chemicals"
+  "creativetab.chemistrialmod.other_chemicals_tab": "Other Chemicals",
+  "creativetab.chemistrialmod.carbonate_salts_tab": "Salts - Carbonates"
 }

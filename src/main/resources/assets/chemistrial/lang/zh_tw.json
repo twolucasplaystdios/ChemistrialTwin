@@ -10,6 +10,9 @@
 
 
   "item.chemistrial.iron_oxide": "氧化鐵",
+
+  "item.chemistrial.calcium_carbonate": "碳酸鈣",
+
   "item.chemistrial.mercury_ii_sulfide": "硫化汞",
 
 
@@ -27,5 +30,6 @@
   "creativetab.chemistrialmod.transition_metals_tab": "過渡金屬",
   "creativetab.chemistrialmod.actinides_metals_tab": "錒系元素",
   "creativetab.chemistrialmod.reactive_chemicals_tab": "強反應力化學藥劑",
-  "creativetab.chemistrialmod.other_chemicals_tab": "其他化合物"
+  "creativetab.chemistrialmod.other_chemicals_tab": "其他化合物",
+  "creativetab.chemistrialmod.carbonate_salts_tab": "鹽類 - 碳酸鹽類"
 }
