@@ -1,0 +1,15 @@
+TODO as of 2026:
+- [ ] Sodium (Issue #4)
+  - [ ] Sodium Chloride Stuff
+    - [x] Add Sodium Chloride Extraction
+      - [x] Salt features
+      - [ ] Add Sodium Metal Extraction
+    - [ ] Add Sodium Bicarbonate
+  - [x] ~~Added Sodium Metal~~ (before 2026/08/24)
+- [ ] Calcium (Issue #6)
+  - [x] ~~Added Calcium Carbonate~~ (before 2026/08/24)
+    - [ ] Calcium Carbonate Texture
+- [ ] Gas Implementation **(If possible)**
+  - [ ] Hydrogen Gas Implementation
+  - [ ] Chlorine Gas Implementation
+  - [ ] Carbon Dioxide Gas Implementation
