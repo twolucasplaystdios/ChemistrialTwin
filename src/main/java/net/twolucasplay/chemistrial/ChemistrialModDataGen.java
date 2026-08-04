@@ -7,6 +7,7 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.twolucasplay.chemistrial.blocks.ModBlocks;
 import net.twolucasplay.chemistrial.datagen.*;
 
 import java.util.Collections;
@@ -23,6 +24,7 @@ public class ChemistrialModDataGen {
         generator.addProvider(true, new ChemistrialModModelProvider(packOutput));
         generator.addProvider(true, new ChemistrialModItemTagProvider(packOutput, lookupProvider, ChemistrialMod.MODID));
         generator.addProvider(true, new ChemistrialModBlocksTagProvider(packOutput, lookupProvider, ChemistrialMod.MODID));
+
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ChemistrialModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(true, new ModGlobalLootModifierProvider(packOutput, lookupProvider));

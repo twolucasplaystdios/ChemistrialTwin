@@ -15,7 +15,7 @@ import net.twolucasplay.chemistrial.ChemistrialMod;
 import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
 
 @EventBusSubscriber(modid = ChemistrialMod.MODID)
-public class ModModifyEvents {
+public class    ModModifyEvents {
     @SubscribeEvent
     public static void modifyComponents(ModifyDefaultComponentsEvent event) {
 

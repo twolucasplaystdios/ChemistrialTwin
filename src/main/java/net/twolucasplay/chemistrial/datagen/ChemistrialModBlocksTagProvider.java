@@ -28,6 +28,7 @@ public class ChemistrialModBlocksTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ZINC_BLOCK.getKey())
+                .add(ModBlocks.DEEPSLATE_ZINC_ORE.getKey())
                 .add(ModBlocks.ZINC_ORE.getKey());
     }
 }

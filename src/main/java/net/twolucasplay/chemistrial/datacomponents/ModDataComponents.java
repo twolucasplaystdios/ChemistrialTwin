@@ -63,6 +63,22 @@ public class ModDataComponents {
                     .build()
     );
 
+
+    public static final Supplier<DataComponentType<Float>> TEMPERATURE = COMPONENTS.register(
+            "temperature",
+            () -> DataComponentType.<Float>builder()
+                    .networkSynchronized(ByteBufCodecs.FLOAT) // 自動同步客戶端與伺服器
+                    .persistent(Codec.FLOAT)                  // 自動儲存到存檔
+                    .build()
+    );
+
+    public static final Supplier<DataComponentType<String>> ORIGINAL_BIOME = COMPONENTS.register(
+            "original_biome",
+            () -> DataComponentType.<String>builder()
+                    .networkSynchronized(ByteBufCodecs.STRING_UTF8) // 自動同步客戶端與伺服器
+                    .persistent(Codec.STRING)                  // 自動儲存到存檔
+                    .build()
+    );
     public static void register(IEventBus eventBus) {
         COMPONENTS.register(eventBus);
     }

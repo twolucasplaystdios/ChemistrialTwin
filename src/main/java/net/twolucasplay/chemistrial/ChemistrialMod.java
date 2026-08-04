@@ -1,8 +1,9 @@
 package net.twolucasplay.chemistrial;
 
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FireBlock;
+import net.minecraft.world.item.Item;
 import net.twolucasplay.chemistrial.blocks.ModBlocks;
 import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
 import net.twolucasplay.chemistrial.items.ModItems;
@@ -43,6 +44,7 @@ public class ChemistrialMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+
         ModLootModifier.register(modEventBus);
 
 
@@ -60,6 +62,7 @@ public class ChemistrialMod {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         // Some common setup code
+
     }
 
     // Add the example block item to the building blocks tab
