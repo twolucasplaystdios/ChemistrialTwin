@@ -53,6 +53,11 @@ public class ModItems {
             properties -> properties
     );
 
+    public static final DeferredItem<Item> COPPER_II_SULFATE_PENTAHYDRATE = ITEMS.registerSimpleItem(
+            "copper_ii_sulfate_pentahydrate",
+            properties -> properties
+    );
+
     public static final DeferredItem<Item> MERCURY_II_SULFIDE = ITEMS.registerSimpleItem(
             "mercury_ii_sulfide",
             properties -> properties

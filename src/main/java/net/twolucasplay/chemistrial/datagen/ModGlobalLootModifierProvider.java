@@ -14,7 +14,7 @@ import net.twolucasplay.chemistrial.loot.AddItemStackModifier;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
+public class    ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     public ModGlobalLootModifierProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, ChemistrialMod.MODID);
     }
