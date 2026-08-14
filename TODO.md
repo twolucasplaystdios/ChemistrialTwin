@@ -9,7 +9,7 @@
   - [x] ~~Added Sodium Metal~~ (before 2026/08/24)
 - [ ] Calcium (Issue #6)
   - [x] ~~Added Calcium Carbonate~~ (before 2026/08/24)
-    - [ ] Calcium Carbonate Texture
+    - [x] ~~Calcium Carbonate Texture~~
 - [ ] Gas Implementation **(If possible)**
   - [ ] Hydrogen Gas Implementation
   - [ ] Chlorine Gas Implementation
