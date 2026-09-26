@@ -48,6 +48,8 @@ public class ModItems {
     );
 
 
+
+
     public static final DeferredItem<Item> IRON_OXIDE = ITEMS.registerSimpleItem(
             "iron_oxide",
             properties -> properties
@@ -70,15 +72,9 @@ public class ModItems {
             properties -> properties
     );
 
-
-    // Math Stuff
-
-    public static final DeferredItem<Item> COMPASS_STICK = ITEMS.register("compass_stick",
-            id -> new ChemistrialMathCompassItem(
-                new Item.Properties()
-                        .setId(ResourceKey.create(Registries.ITEM, id))  // 完美對應，再也不用手動敲字串、也不會報錯了！
-                        .component(ModDataComponents.CENTER_X.get(), 1.00f)
-            )
+    public static final DeferredItem<Item> SODIUM_CHLORIDE = ITEMS.registerSimpleItem(
+            "sodium_chloride",
+            properties -> properties
     );
 
 

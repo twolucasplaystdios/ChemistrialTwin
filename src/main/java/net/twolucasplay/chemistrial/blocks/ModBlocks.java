@@ -1,21 +1,21 @@
 package net.twolucasplay.chemistrial.blocks;
 
-import net.minecraft.references.BlockIds;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.twolucasplay.chemistrial.ChemistrialMod;
 import net.twolucasplay.chemistrial.items.ModItems;
-import net.twolucasplay.chemistrial.mixin.FireBlockMixin;
 
 import java.util.function.Function;
 
+/**
+ * The Chemistrial mod's Blocks class. Registers all the blocks.
+ * @author twolucasplay
+ */
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ChemistrialMod.MODID);
 
@@ -50,6 +50,12 @@ public class ModBlocks {
         return toReturn;
     }
 
+    /**
+     * Registers the fire block, mostly from the item burning.
+     * @param name Name of the block.
+     * @param dyeColor Fire block's color.
+     * @param blockFactory Factory of the fire block.
+     */
     private static <T extends BaseFireBlock> DeferredBlock<T> registerCustomFireBlock(String name, DyeColor dyeColor, Function<BlockBehaviour.Properties, T> blockFactory   ) {
         return BLOCKS.registerBlock(name,
                 properties -> blockFactory.apply(properties.mapColor(dyeColor))
@@ -60,6 +66,10 @@ public class ModBlocks {
         ModItems.ITEMS.registerItem(name, properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()));
     }
 
+    /**
+     * Registers all the blocks.
+     * @param eventBus I'll find out what this means in the future.
+     */
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
