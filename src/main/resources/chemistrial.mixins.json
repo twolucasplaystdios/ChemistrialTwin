@@ -3,7 +3,8 @@
   "package": "net.twolucasplay.chemistrial.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "FireBlockMixin"
+    "FireBlockMixin",
+    "FontMixin"
   ],
   "injectors": {
     "defaultRequire": 1

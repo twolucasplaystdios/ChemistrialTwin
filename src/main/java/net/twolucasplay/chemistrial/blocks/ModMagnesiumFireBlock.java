@@ -15,7 +15,7 @@ public class ModMagnesiumFireBlock extends FireBlock {
 
     /**
      *
-     * @implNote Add damage to player.
+     * Future Addition: Add more damage to player.
      */
     public ModMagnesiumFireBlock(Properties properties) {
         super(properties.lightLevel(state -> 15));

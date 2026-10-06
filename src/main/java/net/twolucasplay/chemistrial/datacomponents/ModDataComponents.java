@@ -72,6 +72,14 @@ public class ModDataComponents {
                     .build()
     );
 
+    public static final Supplier<DataComponentType<Float>> ACIDITY = COMPONENTS.register(
+            "acidity",
+            () -> DataComponentType.<Float>builder()
+                    .networkSynchronized(ByteBufCodecs.FLOAT) // 自動同步客戶端與伺服器
+                    .persistent(Codec.FLOAT)                  // 自動儲存到存檔
+                    .build()
+    );
+
     public static final Supplier<DataComponentType<String>> ORIGINAL_BIOME = COMPONENTS.register(
             "original_biome",
             () -> DataComponentType.<String>builder()
