@@ -41,8 +41,10 @@ public class CustomPreparedText implements PreparedText {
         return TYPE_CACHE.computeIfAbsent(texture, id ->
                 RenderType.create(
                         "latex_render_type_" + id.getPath(),
-                        RenderSetup.builder(RenderPipelines.GUI)
-                                .withTexture("latex_render", id)
+                        RenderSetup.builder(RenderPipelines.GUI_TEXT)
+                                .withTexture("Sampler0", id)
+                                .useOverlay()
+                                .useLightmap()
                                 .createRenderSetup()
                 )
         );

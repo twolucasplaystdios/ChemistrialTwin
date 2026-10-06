@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.rendertype.RenderType;
 import org.joml.Matrix3x2f;
 import org.joml.Matrix4fc;
 import org.joml.Matrix3x2fc;
+import org.jspecify.annotations.NonNull;
 
 import static net.neoforged.fml.earlydisplay.render.GlState.enableBlend;
 
@@ -37,12 +38,12 @@ public class LatexTextRenderable implements TextRenderable {
 
     @Override
     public RenderPipeline guiPipeline() {
-        return RenderPipelines.GUI; // 沿用最穩定的基礎 2D 管線
+        return RenderPipelines.GUI_TEXT; // 沿用最穩定的基礎 2D 管線
     }
 
     // 💡 修正：直接回傳快取好的真實 GPU 視圖，徹底解決純白方塊（沒貼圖）的問題！
     @Override
-    public GpuTextureView textureView() {
+    public @NonNull GpuTextureView textureView() {
         return this.textureView;
     }
 
@@ -72,8 +73,6 @@ public class LatexTextRenderable implements TextRenderable {
     }
 
     private void renderWith3x2(Matrix3x2fc matrix, VertexConsumer consumer, int lightmap) {
-        // 動態開啟半透明混合模式
-        enableBlend(true);
 
         consumer.addVertexWith2DPose(matrix, left, bottom)
                 .setColor(255, 255, 255, 255)

@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import com.mojang.blaze3d.platform.NativeImage;
 import net.minecraft.resources.Identifier;
+import org.scilab.forge.jlatexmath.TeXConstants;
 import org.scilab.forge.jlatexmath.TeXFormula;
 import org.scilab.forge.jlatexmath.TeXIcon;
 
@@ -36,21 +37,28 @@ public class ChemistrialLatexTextureManager {
             RENDER_SERVICE.submit(() -> {
                 try {
                     TeXFormula formula = new TeXFormula(latex);
-                    TeXIcon icon = formula.createTeXIcon(TeXFormula.SERIF, 20);
+                    int scale = 2;
+                    TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 20  * scale);
                     icon.setInsets(new Insets(1, 1, 1, 1));
 
                     int w = icon.getIconWidth();
                     int h = icon.getIconHeight();
 
+                    icon.setForeground(Color.WHITE); // 必須是純白
+
+
                     BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
                     Graphics2D g2 = img.createGraphics();
 
-                    // 確保 AWT 圖層 100% 完全透明去背
                     g2.setComposite(AlphaComposite.Clear);
-                    g2.fillRect(0, 0, w, h);
+                    g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
                     g2.setComposite(AlphaComposite.SrcOver);
-                    g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                    g2.setColor(Color.WHITE);
 
+                    g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                    g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+
+                    icon.setForeground(Color.WHITE);
                     icon.paintIcon(null, g2, 0, 0);
                     g2.dispose();
 
