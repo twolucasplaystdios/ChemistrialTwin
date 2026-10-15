@@ -1,10 +1,6 @@
-package net.twolucasplay.chemistrial.blocks;
+package net.twolucasplay.chemistrial.blocks.extendables;
 
-import com.mojang.serialization.MapCodec;
-import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.block.FireBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import org.jspecify.annotations.NonNull;
 
 
 /**

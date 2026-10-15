@@ -8,6 +8,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.twolucasplay.chemistrial.ChemistrialMod;
+import net.twolucasplay.chemistrial.blocks.extendables.ModMagnesiumFireBlock;
+import net.twolucasplay.chemistrial.blocks.extendables.ModSulfurFireBlock;
 import net.twolucasplay.chemistrial.items.ModItems;
 
 import java.util.function.Function;

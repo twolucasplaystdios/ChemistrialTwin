@@ -5,16 +5,19 @@ import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.twolucasplay.chemistrial.ChemistrialMod;
+import net.twolucasplay.chemistrial.datatypes.ChemItemIngredients;
 
+import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class ModDataComponents {
     public static final DeferredRegister<DataComponentType<?>> COMPONENTS =
             DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, ChemistrialMod.MODID);
 
-    // 註冊同位素組件
+    // Isotopes
     public static final Supplier<DataComponentType<Integer>> ISOTOPE = COMPONENTS.register(
             "isotope",
             () -> DataComponentType.<Integer>builder()
@@ -31,6 +34,9 @@ public class ModDataComponents {
                     .build()
     );
 
+
+    // TODO: Rewrite this
+    @Deprecated(forRemoval = true)
     public static final Supplier<DataComponentType<Float>> PURITY = COMPONENTS.register(
             "purity",
             () -> DataComponentType.<Float>builder()
@@ -38,6 +44,13 @@ public class ModDataComponents {
                     .persistent(Codec.FLOAT)                  // 自動儲存到存檔
                     .build()
     );
+
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ChemItemIngredients>> MY_CUSTOM_COMPONENT =
+            COMPONENTS.register("chem_ingredient_component", () -> DataComponentType.<ChemItemIngredients>builder()
+                    .persistent(ChemItemIngredients.CODEC) // 存檔與 NBT 同步需要
+                    .networkSynchronized(net.minecraft.network.codec.ByteBufCodecs.fromCodec(ChemItemIngredients.CODEC))
+                    .build()
+            );
 
     public static final Supplier<DataComponentType<Float>> CENTER_X = COMPONENTS.register(
             "center_x",
@@ -91,3 +104,4 @@ public class ModDataComponents {
         COMPONENTS.register(eventBus);
     }
 }
+

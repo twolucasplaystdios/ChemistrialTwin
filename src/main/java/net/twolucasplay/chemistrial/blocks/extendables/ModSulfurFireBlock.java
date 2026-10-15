@@ -1,4 +1,4 @@
-package net.twolucasplay.chemistrial.blocks;
+package net.twolucasplay.chemistrial.blocks.extendables;
 
 import net.minecraft.world.level.block.FireBlock;
 

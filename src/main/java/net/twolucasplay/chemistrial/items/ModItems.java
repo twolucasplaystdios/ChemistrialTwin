@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.twolucasplay.chemistrial.ChemistrialMod;
 import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
+import net.twolucasplay.chemistrial.items.extendables.ChemistrialRadioactiveItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ChemistrialMod.MODID);

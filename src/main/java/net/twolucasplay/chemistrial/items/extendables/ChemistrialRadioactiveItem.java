@@ -1,7 +1,6 @@
-package net.twolucasplay.chemistrial.items;
+package net.twolucasplay.chemistrial.items.extendables;
 
 import net.minecraft.world.item.ItemStack;
-import net.twolucasplay.chemistrial.datacomponents.ModDataComponents;
 
 public class ChemistrialRadioactiveItem extends ChemistrialChemItem {
     public ChemistrialRadioactiveItem(Properties properties) {
