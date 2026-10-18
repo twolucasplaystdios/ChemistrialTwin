@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "chemistrial:item/iron_oxide"
+    "layer0": "chemistrial:item/ferric_oxide"
   }
 }

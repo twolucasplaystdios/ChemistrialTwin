@@ -3,7 +3,6 @@ package net.twolucasplay.chemistrial.tabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -57,11 +56,11 @@ public class ModCreativeModeTabs {
 
 
     public static final Supplier<CreativeModeTab> OTHERS_ITEMS_TAB = CREATIVE_MODE_TABS.register("other_chemicals_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.IRON_OXIDE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FERRIC_OXIDE.get()))
                     .title(Component.translatable("creativetab.chemistrialmod.other_chemicals_tab"))
                     .withTabsBefore(Identifier.fromNamespaceAndPath(ChemistrialMod.MODID, "reactive_chemicals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.IRON_OXIDE);
+                        output.accept(ModItems.FERRIC_OXIDE);
                         output.accept(ModItems.MERCURY_II_SULFIDE);
                     }).build());
 

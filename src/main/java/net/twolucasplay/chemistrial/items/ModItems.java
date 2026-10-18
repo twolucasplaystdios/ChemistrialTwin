@@ -51,8 +51,8 @@ public class ModItems {
 
 
 
-    public static final DeferredItem<Item> IRON_OXIDE = ITEMS.registerSimpleItem(
-            "iron_oxide",
+    public static final DeferredItem<Item> FERRIC_OXIDE = ITEMS.registerSimpleItem(
+            "ferric_oxide",
             properties -> properties
     );
 

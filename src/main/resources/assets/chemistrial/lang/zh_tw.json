@@ -1,6 +1,8 @@
 {
   "itemGroup.chemistrial": "Example Mod Tab",
+
   "item.chemistrial.raw_zinc": "Raw Zinc",
+
   "item.chemistrial.zinc_ingot": "鋅錠",
   "block.chemistrial.zinc_block": "鋅塊",
   "block.chemistrial.zinc_ore": "鋅礦",
@@ -9,7 +11,7 @@
   "item.chemistrial.magnesium_ingot": "鎂錠",
 
 
-  "item.chemistrial.iron_oxide": "氧化鐵",
+  "item.chemistrial.ferric_oxide": "氧化鐵(III)",
   "item.chemistrial.sodium_chloride": "氯化鈉",
 
 

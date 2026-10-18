@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "chemistrial:item/iron_oxide"
+    "model": "chemistrial:item/ferric_oxide"
   }
 }

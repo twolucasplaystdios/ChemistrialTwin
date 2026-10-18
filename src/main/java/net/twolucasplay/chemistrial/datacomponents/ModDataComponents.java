@@ -45,7 +45,7 @@ public class ModDataComponents {
                     .build()
     );
 
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ChemItemIngredients>> MY_CUSTOM_COMPONENT =
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ChemItemIngredients>> INGREDIENTS =
             COMPONENTS.register("chem_ingredient_component", () -> DataComponentType.<ChemItemIngredients>builder()
                     .persistent(ChemItemIngredients.CODEC) // 存檔與 NBT 同步需要
                     .networkSynchronized(net.minecraft.network.codec.ByteBufCodecs.fromCodec(ChemItemIngredients.CODEC))
